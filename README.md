@@ -264,3 +264,39 @@ Esto sucede porque la variable nombre tiene un scope local, por lo que solo se p
 Esto sucede porque JavaScript no puede volver a buscar a una función que no sabe si encontrará la variable o no, teniendo en cuenta que puede haber una variedad ilimitada de funciones, ¿cuál buscar? Por eso, el alcance de una función local es el lugar donde fue declarada.
 
 --------------------------------------------------------------------------
+
+<h1>Hoisting</h1> 
+
+Hoisting es un término para describir que las declaraciones de variables y funciones son desplazadas a la parte superior del scope más cercano, scope global o de función. Esto sucede solamente con las declaraciones y no con las asignaciones.
+
+El código permanece igual, solo es una interpretación del motor de JavaScript. En el caso de las variables solamente sucede cuando son declaradas con var.
+
+Hoisting en variables declaradas con var
+Mira el siguiente código, ¿qué crees que sea el resultado del console.log?
+
+<img src="https://imgur.com/f3SA9r7.png" alt="code">
+
+La respuesta del console.log es undefined, porque al hacer referencia a una variable que no está declarada aún, JavaScript crea esta variable antes de declararla y le asigna un valor de undefined.
+
+Lo que JavaScript está haciendo sería lo siguiente:
+
+<img src="https://imgur.com/XYmVP3v.png" alt="code">
+
+<h1>Hoisting en funciones</h1>
+
+Mira el siguiente código, ¿qué crees que sea el resultado del console.log?
+
+<img src="https://imgur.com/05VCz9t.png" alt="code">
+
+La respuesta es "Hola", porque al invocar una función que no está declarada, JavaScript la eleva y por eso podemos invocar una función antes de declararla.
+
+<img src="https://imgur.com/9NTlyaG.png" alt="code"> 
+
+Pero, lo que realmente sucede es que JavaScript guarda la función en memoria en la fase de creación de un contexto de ejecución, no asigna undefined como con las variables.
+
+Buenas prácticas
+El tema de Hoisting solo sucede con las declaraciones de variables y funciones, por lo que se** recomienda declarar las variables y las funciones lo más arriba posible del código**, para evitar errores.
+
+También, el tema de hoisting ya está solucionado con las nuevas formas de declarar variables con let y const.
+
+--------------------------------------------------------------------------
