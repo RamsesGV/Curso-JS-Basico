@@ -10,6 +10,7 @@ Puedes construir aplicaciones de escritorio con JavaScript, usando un framework 
 
 También puedes trabajar en la parte del Back-end o **IOT **(Internet Od Things) es un concepto que se refiere a una interconexion digital de objetos cotidianos con Internet. Esto con un Framework llamado NodeJS, el cual es un entorno de ejecución de JavaScript que corre directamente en el Back-end.
 
+<img src="https://imgur.com/bfqmMoy.png" alt="js">
 --------------------------------------------------------------------------
 
 <h1>Resumen</h1>
