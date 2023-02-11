@@ -228,4 +228,4 @@ Si haces referencia a una variable, el motor de JavaScript buscará su declaraci
 Tipos de scope
 Existen dos tipos de scope: global y local. El scope local puede ser de función o de bloque. Un bloque es toda porción de código que está encerrada entre llaves {}, estos pueden ser los bloques: función, if, else, while, y for.
 
-<img src="https://cdn.document360.io/da52b302-22aa-4a71-9908-ba18e68ffee7/Images/Documentation/scope_closure01.PNG" alt="scope" 
+<img src="https://cdn.document360.io/da52b302-22aa-4a71-9908-ba18e68ffee7/Images/Documentation/scope_closure01.PNG" alt="scope"> 
