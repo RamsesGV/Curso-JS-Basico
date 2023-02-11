@@ -13,6 +13,7 @@ También puedes trabajar en la parte del Back-end o **IOT **(Internet Od Things)
 --------------------------------------------------------------------------
 
 <h1>Resumen</h1>
+
 ¿Cómo nace Javascript?
 Nace con la necesidad de generar dinamismo en las páginas web y que a su vez los usuarios y las empresas pudieran interactuar unos con otros.
 
@@ -41,7 +42,7 @@ Espero les sea de utilidad 😉
 
 --------------------------------------------------------------------------
 
-VALORES
+<h1>VALORES</h1>
 
 PRIMITIVOS: son los valores básicos que se utilizan para poder generar códigos.
 
@@ -60,6 +61,7 @@ Array: se genera ocupando corchetes, los cuales dentro ocupan valores primitivos
 Valor tipo Objeto: se generan con corchetes, los cuales dentro ocupan una data que se transforma en objeto, ejem de sintaxis: { nombre: “Diego”}.
 
 --------------------------------------------------------------------------
+<h1>Formas de declarar una variable</h1>
 
 Dentro de JavaScript tenemos tres formas de declarar una variable las cuales son: var, const y let.
 
@@ -88,7 +90,7 @@ o Su contexto de es bloque: Solo funciona dentro de un bloque {}, fuera de ello 
 
 --------------------------------------------------------------------------
 
-Diferencias entre var, const y let:
+<h1>Diferencias entre var, const y let:</h1>
 
 var: Es una variable que puede cambiar su valor en un futuro y su alcance es local. Surgió en ECMAScript5.
 Ejemplo:
@@ -108,6 +110,7 @@ let age = 20;
 Es un resumen muy básico de las diferencias entre estas variables.
 
 --------------------------------------------------------------------------
+<h1>funciones</h1>
 
 Las funciones son bloques de código que solucionan un problema específico para ser reutilizados. Existen dos tipos de funciones: declarativas y expresivas.
 
@@ -183,6 +186,7 @@ var resultado = suma(2, 2)
 console.log(resultado) //4
 
 --------------------------------------------------------------------------
+<h1>Funciones 2</h1>
 
 Cuando hablamos de funciones en JavaScript, tenemos dos tipos de funciones: Funciones Declarativas (function declaration / function statement) y Expresiones de función (function expression / funciones anónimas).
 
@@ -218,6 +222,7 @@ CONST/VAR/LET = miFuncion() {
 }
 
 --------------------------------------------------------------------------
+<h1>El Scope</h1>
 
 El scope es cada uno de los entornos donde las variables tienen alcance dentro del código de JavaScript. En otras palabras, determina que valor tendrá la variable dependiendo dónde se encuentre.
 
@@ -229,3 +234,32 @@ Tipos de scope
 Existen dos tipos de scope: global y local. El scope local puede ser de función o de bloque. Un bloque es toda porción de código que está encerrada entre llaves {}, estos pueden ser los bloques: función, if, else, while, y for.
 
 <img src="https://imgur.com/Qz6km8t.png" alt="scope"> 
+
+En la imagen anterior, el entorno más cercano para la variable saludo es el scope de bloque, le sigue el scope de función y finalmente el scope global. Este es un ejemplo del recorrido que sigue JavaScript hasta encontrar la variable referenciada.
+
+Qué es el scope global
+Las variables globales son aquellas que se encuentran declaradas fuera de los bloques de código o funciones .El scope global es el entorno donde las variables globales pueden ser accedidas desde cualquier lugar de nuestro programa.
+
+En el siguiente ejemplo, mira el código y piensa qué mostrará en consola. Una vez tengas las respuestas, abre la consola. ¿Qué sucedió?
+
+<img src="https://imgur.com/B7zjvK2.png" alt="code">
+
+Con este ejemplo podemos concluir que la función saludar tiene acceso a la variable nombre. ¿Por qué? Porque la variable nombre está en un scope global.
+
+Volviendo al ejemplo de las llaves, JavaScript busca la variable en el contexto más cercano (scope local de función) ¿la encontró? No, entonces sigue buscando en el scope global ¿la encontró? Sí, entonces la utiliza. Ten en cuenta que JavaScript busca de un scope cercano a uno lejano, pero no en viceversa, esto es importante para el scope local.
+
+Entonces, una variable global puede ser accedida en cualquier parte, porque el scope global es el último entorno en el que JavaScript busca una variable. Recuerda esto cuándo se hable de scope local.
+
+Qué es el scope local
+Las variables locales son aquellas que se encuentran declaradas dentro de los bloques de código o funciones. El scope local es el entorno donde las variables locales solo se pueden acceder desde una función o bloque del programa.
+
+Observa el siguiente código y piensa cuál será el resultado.
+
+<img src="https://imgur.com/dc8V2kP.png" alt="code">
+
+Primeramente, al invocarse la función saludo imprimirá "Andres" por consola, pero inmediatamente después, existirá un error de referencia.
+Esto sucede porque la variable nombre tiene un scope local, por lo que solo se puede acceder dentro de la misma. Volviendo al ejemplo de las llaves, JavaScript busca la variable en el contexto más cercano (scope global) ¿la encontró? No, entonces no lo encontrará en ningún lado y arroja un error de referencia.
+
+Esto sucede porque JavaScript no puede volver a buscar a una función que no sabe si encontrará la variable o no, teniendo en cuenta que puede haber una variedad ilimitada de funciones, ¿cuál buscar? Por eso, el alcance de una función local es el lugar donde fue declarada.
+
+--------------------------------------------------------------------------
