@@ -375,7 +375,7 @@ El operador de concatenación es semejando al operador de suma, pero no es el mi
 Cómo utilizar el operador de incremento y decremento
 El operador de incremento (++) y decremento (--) consiste en aumentar o disminuir una unidad a una variable, respectivamente. Estos operadores se pueden emplear antes y después de la variable.
 
-<img src="https://imgur.com/0Zo2BBU.png alt="code">
+<img src="https://imgur.com/0Zo2BBU.png" alt="code">
 
 Sin embargo, si se emplea antes o después, el comportamiento es diferente. Si está previamente, el valor de la variable aumenta y devuelve el valor actual. Si está después, el valor de la variable aumenta, pero devuelve el valor anterior.
 
