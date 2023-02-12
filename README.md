@@ -300,3 +300,220 @@ El tema de Hoisting solo sucede con las declaraciones de variables y funciones, 
 También, el tema de hoisting ya está solucionado con las nuevas formas de declarar variables con let y const.
 
 --------------------------------------------------------------------------
+
+<h1>Coercion</h1>
+
+La coerción consiste en transformar de un tipo de dato a otro de una variable. Existen dos tipos de coerción: implícita y explícita.
+
+Qué es la coerción implícita
+La coerción implícita consiste en la transformación de tipos mediante la ayuda de JavaScript. Esto ocurre en operaciones de diferentes tipos, ya que es un lenguaje débil y dinámicamente tipado.
+
+Al momento de compilar el código, el motor de JavaScript, si encuentra alguna incoherencia (una suma de un número con un string), el motor lo interpreta a su manera y arroja un valor que puede ser erróneo.
+
+Algunos de los ejemplos de coerción implícita son los siguientes:
+
+<img src="https://imgur.com/KwlmyDr.png" alt="code">
+
+Para evitar esto realiza la coerción explícita para manejar tipos de datos iguales antes de realizar cualquier operación.
+
+Qué es la coerción explícita
+La coerción explícita es la transformación de tipos de datos que controlamos el resultado. Para realizar estas transformaciones utiliza las funciones Number(), String() y Boolean(), para convertir a tipo número, string y lógico, respectivamente.
+
+<img src="https://imgur.com/fGchWMo.png" alt="code">
+
+Puedes utilizar la palabra reservada typeof para comprobar el tipo de dato transformado.
+
+--------------------------------------------------------------------------
+
+<h1>Valores: Truthy y Falsy</h1>
+
+Los valores truthy y falsy son valores verdaderos y falsos cuando se realiza una coerción de cualquier tipo a booleano, respectivamente. Esto es importante para manejar condicionales, ya que una estructura condicional evalúa si un valor es verdadero o falso en un contexto booleano.
+
+Qué son los valores falsy
+Un valor falsy es aquel que es falso en un contexto booleano, estos son: 0, "" (string vacío), false, NaN, undefined o null.
+
+<img src="https://imgur.com/qDXToYY.png" alt="code">
+
+También puedes realizar una coerción implícita con el operador de negación (!), pero solo es para que la conozcas, no es recomendable.
+
+<img src="https://imgur.com/ehhhaee.png" alt="code">
+
+Qué son los valores truthy
+Un valor truthy es aquel que es verdadero en un contexto booleano, son todos los valores que no sean falsy, que especificamos en la anterior sección.
+
+<img src="https://imgur.com/pnJudOa.png" alt="code">
+
+Cabe recalcar que en JavaScript todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos.
+
+--------------------------------------------------------------------------
+
+<h1>Operadores: Asignación, Comparación y Aritméticos.</h1>
+
+Para realizar operaciones en JavaScript es necesario conocer los diferentes tipos de operadores que necesitarás. Los tipos de operadores en el lenguaje son: aritméticos, asignación y comparación.
+
+Qué son los operadores aritméticos
+Los operadores aritméticos se utilizan para efectuar operaciones matemáticas.Para realizar las operaciones básicas, como suma, resta, multiplicación y división; utiliza los siguientes operadores:
+
+<img src="https://imgur.com/Y37qAEr.png" alt="code"> 
+
+Recuerda que no existe la división entre 0. En ese caso JavaScript devolverá el valor Infinity.
+
+Qué es el operador de residuo
+El operador de residuo ( % ), el signo de porcentaje, devuelve el residuo de una división.
+
+<img src="https://imgur.com/wfRYZ0L.png" alt="code">
+
+Esto es importante para saber los múltiplos de cualquier número o si un número es par.
+
+Qué es el operador de concatenación
+El operador de concatenación consiste en unir dos o más strings.
+
+<img src="https://imgur.com/eDKMz1z.png" alt="code">
+
+El operador de concatenación es semejando al operador de suma, pero no es el mismo. Si utilizas este operador con diferentes tipos de datos, JavaScript ejecutará una coerción implícita.
+
+Cómo utilizar el operador de incremento y decremento
+El operador de incremento (++) y decremento (--) consiste en aumentar o disminuir una unidad a una variable, respectivamente. Estos operadores se pueden emplear antes y después de la variable.
+
+<img src="https://imgur.com/0Zo2BBU.png alt="code">
+
+Sin embargo, si se emplea antes o después, el comportamiento es diferente. Si está previamente, el valor de la variable aumenta y devuelve el valor actual. Si está después, el valor de la variable aumenta, pero devuelve el valor anterior.
+
+<img src="https://imgur.com/wsWThIQ.png" alt="code">
+
+Qué son los operadores de asignación
+En la clase de variables aprendiste un operador de asignación (=). Este operador es diferente a los operadores de igualdad (== y ===).
+
+El operador de asignación (=) consiste en asignar un valor a una variable.
+
+<img src="https://imgur.com/EhOfSy8.png" alt="code">
+
+Operadores de asignación combinada
+En ciertos casos, reasignarás la misma variable más otro valor. Estas variables pueden utilizarse como acumuladores o contadores.
+
+<img src="https://imgur.com/XFkTD55.png" alt="code">
+
+Una forma para evitar estar repitiendo la variable en la reasignación, es combinarlas con los operadores aritméticos antes del operador de asignación.
+
+<img src="https://imgur.com/QXHHAyk.png" alt="code">
+
+Ejercicio de operadores de asignación
+Observa el siguiente código, ¿cuál será el resultador del console.log?
+
+<img src="https://imgur.com/YmqseY6.png" alt="code">
+
+La respuesta es 5. ¿Tienes la misma respuesta?
+
+Qué son los operadores de comparación
+Un operador de comparación compara dos o más valores y devuelve un valor lógico (verdadero o falso).
+
+Qué son los operadores de igualdad
+Existen dos tipos de igualdad:
+
+Igualdad por valor (==): compara dos variables solamente por su valor. Por ejemplo: "3" de tipo string y 3 de tipo número son iguales.
+Igualdad por valor y tipo de dato (===): compara dos variables por su valor y tipo de dato. Por ejemplo: "3" de tipo string y 3 de tipo número no son iguales. Solamente 3 y 3, ambos de tipo número son iguales.
+
+<img src="https://imgur.com/hGeo9QY.png" alt="code">
+
+En conclusión, siempre utiliza la comparación por valor y tipo de dato para evitar errores. Los operadores de igualdad son diferentes al operador de asignación (=).
+
+Qué son los operadores de desigualdad
+Igualmente que los operadores de igualdad, existen dos tipos:
+
+Desigualdad por valor (!=)
+Desigualdad por valor y tipo de dato (!==)
+
+<img src="https://imgur.com/QEABK36.png" alt="code">
+
+Qué son los operadores de mayor o menor
+Los operadores de mayor o menor evalúan intervalos, dependiendo si el valor especificado está incluido o no incluido.
+
+<img src="https://imgur.com/DIls0qA.png" alt="code">
+
+Qué son los operadores lógicos
+Los operadores lógicos comparan dos o más expresiones y devuelve un valor lógico (verdadero o falso). Las expresiones son comparaciones entre valores, se utiliza en conjunto con los operadores de comparación.
+
+Qué es el operador disyunción lógico
+El operador de disyunción o AND (&&) devuelve verdadero, si y solo si ambas expresiones son verdadero. Se lee de la siguiente manera: “La expresión 1 es verdadero Y la expresión 2 es verdadero, entonces es verdadero”.
+
+<img src="https://imgur.com/eCLIINB.png" alt="code">
+
+Por ejemplo, si queremos saber si un número está entre 10 y 20. Es decir, un número que es mayor o igual que 10 Y menor o igual que 20.
+
+<img src="https://imgur.com/5zE7PG7.png" alt="code">
+
+Qué es el operador unión lógico
+El operador de unión u OR (||) devuelve verdadero, si y solo si, alguna expresión es verdadero. Se lee de la siguiente manera: “La expresión 1 es verdadero O la expresión 2 es verdadero, entonces es verdadero”.
+
+<img src="https://imgur.com/U1l61V9.png" alt="code">
+
+Por ejemplo, si queremos saber si un número no está entre 10 y 20. Es decir, un número que es menor o igual que 10 O mayor o igual que 20
+
+<img src="https://imgur.com/TbjHNmB.png" alt="code">
+
+Qué es el operador negación lógico
+El operador de negación o NOT (!) devuelve el valor lógico contrario a la expresión. Se lee de la siguiente manera: “La expresión es verdadero, entonces es falso”.
+
+<img src="https://imgur.com/QoB0ZZx.png" alt="code">
+
+Por ejemplo, si queremos saber si un número no es menor que 0. Es decir, la negación de que un número es menor que 0.
+
+<img src="https://imgur.com/gYBQjRe.png" alt="code">
+
+También se puede escribir únicamente a > 0, sin embargo, es únicamente para entender el propósito del operador de negación.
+
+--------------------------------------------------------------------------
+
+<h1>Condicionales: If, Else, else if</h1>
+
+Los condicionales son estructuras de control que te permiten evaluar diferentes expresiones y realizar determinadas acciones en JavasScript.
+
+Cómo utilizar el condicional ifen JavaScript
+
+Un condicional evalúa si una expresión o condición es verdadera. Por ejemplo, si mi edad es mayor o igual que 18, puedo conducir.
+
+<img src="https://imgur.com/sFyqWke.png" alt="code"> 
+
+La palabra reservada else evalúa cuando la expresión del if es falsa, pero no es obligatorio colocarlo. En el ejemplo anterior, la condición contraria del if es la edad menor que 18, entonces no puedes conducir.
+
+<img src="https://imgur.com/kV2OOxy.png" alt="code">
+
+En otras palabras, si (if) una acción (expresión) es verdadera (true) hago una acción (bloques de código). En el caso contrario (else) efectúo otra acción.
+
+Cómo anidar condicionales al programar
+
+Has aprendido a usar un condicional, pero ¿y si tenemos varias condiciones? Entonces empleamos las palabras reservadas else if junto a la condición a ejecutar, puedes utilizar varias condiciones que necesites. Sin embargo, JavaScript evalúa la primera condición, luego a la segunda, y así sucesivamente. Esto es importante para ordenar las condiciones correctamente y no sobreescribirlas.
+
+<img src="https://imgur.com/igzRKoC.png" alt="code"> 
+
+Por ejemplo, un cliente solicita un descuento según el número de artículos que ha comprado, la tienda ofrece 3 descuentos: 10% si ha comprado más de 5 artículos, 15% si son más de 10 artículos, y todo por encima de 15 artículos recibe un 20% de descuento.
+
+<img src="https://imgur.com/ZFPFjuC.png" alt="code">
+
+Operador ternario
+El operador ternario consiste en evaluar si una expresión es verdadera o falsa. Parecido a un condicional, pero en una línea de código. Esto sirve para evaluar una condición de manera rápida. La estructura que sigue es la siguiente y se lee como: "La condición es verdadera (?), si es así ejecuta el “Bloque verdadero”, caso contrario (:), ejecuta el “Bloque falso”.
+
+Por ejemplo, guardemos en una variable un mensaje si un número es par o impar.
+
+<img src="https://imgur.com/JX7yzkd.png" alt="code">
+
+--------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
