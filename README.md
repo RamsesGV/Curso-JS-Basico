@@ -498,11 +498,107 @@ Por ejemplo, guardemos en una variable un mensaje si un número es par o impar.
 <img src="https://imgur.com/JX7yzkd.png" alt="code">
 
 --------------------------------------------------------------------------
+<h1>Switch</h1>
 
 
+La **estructura switch es otra manera de evaluar condiciones, la diferencia con if es que las condiciones deben ser iguales a un caso o algo específico.
+
+Cómo utilizar el condicional switch
+Colocamos la palabra reservada switch y seguido de la variable o expresión a evaluar, pero sin ningún operador de comparación.
+
+<img src = 'https://imgur.com/Tk8uXPF.png' alt='code'> 
+
+Después colocamos cada caso con la palabra reservada case y el valor que deberá ser igual a la expresión. Seguido colocamos el bloque de código a ejecutar y al final la palabra reservada break para que no vuelva a evaluar otra condición si ya se cumplió.
+
+<img src='https://imgur.com/NCDe8AL.png' alt='code'>
+
+Finalmente, colocamos la condición por defecto con la palabra reservada default que se ejecutará si ninguno de los casos fue el correcto. Esto es semejante al bloque else.
+
+<img src='https://imgur.com/77pb1HP.png' alt='code'>
+
+Esto se leería de la siguiente manera: evalúa (switch) la variable expresion, en el caso de que sea igual a uno (case 1), entonces ejecuta el bloque 1 y termina (break), en el caso de que sea igual a dos (case 2), entonces ejecuta el bloque 2 y termina (break), si no se cumple ninguna, ejecuta un bloque por defecto (default).
+
+Ejemplo utilizando switch
+Por ejemplo, creemos un semáforo.
+
+<img src='https://imgur.com/KK7EnsF.png' alt='code'>
 
 
+Cuándo utilizar switch
+Deberías utilizar switch cuando tengas una gran cantidad de casos, que con el condicional if produciría más cantidad de código. El problema con switch es que no es muy utilizado y todo se resuelve con if. Sin embargo, conocer esta estructura te puede permitir escribir código más legible en ciertos casos.
 
+--------------------------------------------------------------------------
+
+<h1>¿Qué es un array?</h1>
+
+Un array es una estructura de datos que permite almacenar una serie de datos localizados por índices y separados por comas.
+
+Qué son los índices
+El índice es la forma en que accedemos a los elementos de los arrays. En JavaScript, los índices empiezan desde 0, es decir, la primera posición es el índice 0. Un array se inicia mediante la sintaxis de corchetes [] y es tipo de dato objeto.
+
+<img src='https://imgur.com/fejvarG.png' alt='code'> 
+
+Cómo acceder a los elementos del array
+Para acceder a los elementos del array se utiliza la siguiente estructura:
+
+<img src='https://imgur.com/IcrWMWP.png' alt='code'>
+
+Para saber la cantidad de elementos de un array se utiliza la propiedad length.
+
+<img src='https://imgur.com/glg63u9.png' atl='code'>
+
+Ten en cuenta que la posición del elemento es diferente al índice del mismo.
+
+Entonces, para acceder a un elemento del array, únicamente podrás utilizar los índices desde el 0 hasta array.length -1. Si se accede a un índice que no existe, devolverá undefined.
+
+<img src='https://imgur.com/BwgzKwD.png' alt='code'>
+
+Qué es la mutabilidad en los arrays
+La mutabilidad hace referencia a la capacidad de una estructura de datos a cambiar. Esto permite cambiar los valores de los elementos de un array cuando accedemos a sus elementos mediante un índice.
+
+Por ejemplo, cambiemos el segundo elemento con índice 1 al valor de “Platzi”:
+
+<img src='https://imgur.com/rY0sCST.png' alt='code'>
+
+Qué son los métodos de arrays
+Los métodos de arrays son funcionalidades extra. Es semejante a las funciones, pero se accede mediante la notación punto array.metodo(argumentos).
+
+Existen métodos mutables, es decir, que cambian el array original. Estos métodos son:
+
+push
+unshift
+pop
+shift
+
+Cómo utilizar el método push
+El método push agrega uno o varios elementos al final del array original. El método recibe como argumento los valores a agregar. Retorna el número de elementos del array mutado.
+
+
+<img src='https://imgur.com/nTUHmfv.png' alt='code'> 
+
+Cómo utilizar el método unshift
+El método unshift agrega uno o varios elementos al inicio del array original. El método recibe como argumento los valores a agregar. Retorna el número de elementos del array mutado.
+
+<img src='https://imgur.com/zX3wxiC.png' alt='code'>
+
+Cómo utilizar el método pop
+El método pop extrae el elemento del final del array original.
+
+<img src='https://imgur.com/LyNzu0V.png' alt='code'>
+
+Cómo utilizar el método shift
+El método shift extrae el elemento del inicio del array original.
+
+<img src='https://imgur.com/ZmHKHqz.png' alt='code'>
+
+Cómo utilizar el método indexOf
+El método indexOf muestra el índice del elemento especificado como argumento.
+
+<img src='https://imgur.com/QB8JIvQ.png' alt='code'>
+
+Si el elemento no se encuentra en el array, el método devuelve el valor -1.
+
+<img src='https://imgur.com/0VYzyTx.png' alt='code'>
 
 
 
