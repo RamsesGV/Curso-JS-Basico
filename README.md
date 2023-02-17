@@ -600,6 +600,438 @@ Si el elemento no se encuentra en el array, el método devuelve el valor -1.
 
 <img src='https://imgur.com/0VYzyTx.png' alt='code'>
 
+--------------------------------------------------------------------------
+<h1>Loops: for y for of</h1>
+
+
+Un bucle (loop) o ciclo repetitivo es una estructura de control que te permite realizar una o varias instrucciones mientras una condición sea verdadera.
+
+Existen dos tipos de ciclos repetitivos:
+
+For (para)
+While (mientras)
+Qué es un ciclo for
+Para el ciclo for conocemos la cantidad de veces que la estructura repetirá una o varias instrucciones.
+
+Por ejemplo, si queremos los 10 primeros números, sabemos que el ciclo se repetirá 10 veces. Si accedemos a los elementos de un array, sabemos que el ciclo se repetirá length veces.
+
+Cómo utilizar el ciclo for
+La estructura del ciclo for es la siguiente:
+
+<img src ='https://imgur.com/FIRC5j8.png' alt='code'>
+
+La condición consta de tres partes:
+
+Inicio: se debe inicializar una variable que será evaluada en la expresión a comparar. Esta variable puede ser declarada dentro o fuera de la condición.
+Comparación: es una expresión que debe cumplir la variable inicial, cuando no se cumpla, el ciclo termina.
+Pasos: son los intervalos que cambiará la variable inicial, mientras cumpla con la expresión de comparación.
+Cada una de las partes debe estar separada por un punto y coma ( ;).
+
+Practiquemos el uso del bucle for
+Por ejemplo, generemos los números del 1 al 10:
+
+Inicio: inicializamos una variable con el valor de 1, generalmente se utiliza i (índice) como variable para el bucle, pero no es obligatorio. En este caso usaremos var num = 1.
+Condición: La condición será mientras sea menor o igual que 10 (num <= 10),
+Pasos: Debemos aumentar la variable en una unidad, por lo tanto, podemos utilizar num = num +1, num += 1 o num++. Este último únicamente cuando la variable aumente una unidad.
+La estructura es la siguiente:
+
+<img src='https://imgur.com/4r1hP88.png' alt="code">
+
+
+Esto se leería como: “Para (for) la variable num que inicia en 1 (num = 1) mientras sea menor o igual que 10 (num <= 10) en pasos de 1 (num++) ejecuta una o varias instrucciones (console.log)”.
+
+Mira la siguiente tabla que muestra cómo cambia la variable num en cada ciclo.
+
+<img src='https://imgur.com/oPz7WDK.png' alt='code'>
+
+Cómo recorrer arrays con el ciclo for
+En el anterior ejemplo aprendiste a generar números del 1 al 10, utilicemos la misma lógica para recorrer un array.
+
+¿Qué debemos usar para acceder a los elementos de un array? Exactamente, sus índices (variable i). Debemos generar los índices desde 0 hasta length (que no debe estar incluido). Con esto, empleamos la misma variable i para acceder a cada elemento con la sintaxis de corchetes array[i].
+
+La estructura sería siguiente:
+
+<img src='https://imgur.com/H17D9EY.png' alt="code">
+
+La variable elemento es la referencia a cada uno de los elementos del array. Este puede tener cualquier nombre, por eso se inicia con var, debido a que es una variable como el índice i en el bucle for.
+
+<img src='https://imgur.com/3EbFsoC.png' alt='code'>
+
+Por convención, se escribe la variable elemento en singular con respecto al nombre del array. Por ejemplo, si el nombre del array es datos, el nombre de la variable de cada elemento sería dato, y así sucesivamente.
+
+<img src='https://imgur.com/yTzCWZB.png' alt='code'>
+
+Limitaciones del ciclo for … of
+El ciclo for ... of solo accede al valor de cada uno de los elementos del array. Por consiguiente, si quieres cambiar el array original, no podrás, porque necesitas su índice para acceder y cambiar su valor.
+
+Por ejemplo, si quieres duplicar el valor de cada elemento del array, necesitarás su índice.
+
+<img src='https://imgur.com/UXN9SsO.png' alt='code'>
+
+Sin embargo, esto no es malo, depende del problema que estés afrontando. Una forma de solucionar el anterior problema utilizando for ... of, es creando otro array vacío para llenarlo con los nuevos valores, de esta manera no cambiará el array original.
+
+<img src='https://imgur.com/Cj7JE4d.png' alt='code'>
+
+--------------------------------------------------------------------------
+<h1>Loops While</h1>
+
+Para el ciclo while no conocemos la cantidad de veces que la estructura repetirá una o varias instrucciones. Aunque también se puede acoplar para que realice un determinado número de repeticiones.
+
+Por ejemplo, si queremos que un usuario ingrese un valor mayor a 0, no sabremos cuántas veces se equivocará. También, si queremos que un programa se ejecute hasta que el usuario ingrese una opción para salir.
+
+Cómo utilizar el ciclo while
+La estructura del ciclo while es la siguiente:
+
+<img src='https://imgur.com/XTmEDg8.png' alt='code'>
+
+En este caso la condición es una expresión lógica a evaluar, si es verdadero repite el bloque de código, si es falso el ciclo termina. Debido a esto, necesitas cambiar la variable de la condición, para que no existe un bucle infinito.
+
+Generación de números con el bucle while
+Por ejemplo, generemos los números del 1 al 10, ahora con el bucle while.
+
+La estructura es la siguiente:
+
+<img src='https://imgur.com/fovlRLi.png' alt='code'>
+
+Esto se leería como: “Mientras (while) la variable numero sea menor o igual que 10 (numero <= 10) ejecuta una o varias instrucciones (console.log); finalmente, aumenta la variable en uno (numero++) para que no exista un bucle infinito”.
+
+Control de variables con el bucle while
+Otro ejemplo, tenemos un programa únicamente para estudiantes, queremos controlar que un usuario ingrese una edad menor de 18 (y mayor que 0 porque no existe edades negativas). Entonces utilizamos while debido a que no conocemos cuántas veces se equivocará el usuario.
+
+Ejecuta el siguiente código en la terminal de tu navegador, e intenta ingresar un valor incorrecto y observa lo que sucede. Se utiliza la condición contraria a lo que queremos, porque es lo que controlaremos, al cambiar la variable edad evitamos el ciclo infinito.
+
+<img src='https://imgur.com/BV0VZAR.png' alt='code'>
+
+--------------------------------------------------------------------------
+<h1>Objetos</h1>
+
+Un objeto es una estructura de datos que permite almacenar valores mediante propiedad - valor a través de la sintaxis de llaves ({}) y separados por comas.
+
+En las propiedades del objeto es opcional colocar las comillas. En el caso de que haya espacios, es obligatorio.
+
+<img src='https://imgur.com/NojGmHC.png' alt='code'>
+
+Excepto por los primitivos y las funciones, todo es un objeto en JavaScript.
+
+Qué son los atributos y métodos
+En programación orientada a objetos, un objeto es una representación de la realidad, en el cual sus características propias se definen como atributos y sus acciones se definen como métodos.
+
+En otras palabras, los atributos son las variables y los métodos son las funciones propias de cada objeto.
+
+Por ejemplo, definamos el objeto miAuto. Se coloca entre comillas la propiedad año porque el lenguaje no admite caracteres especiales del español. Aunque en ciertas situaciones si admite.
+
+
+<img src='https://imgur.com/5RrpyNQ.png' alt='code'>
+
+Las propiedades marca, modelo y "año" son los atributos del objeto miAuto. La propiedad detalle es un método del objeto miAuto.
+
+Cómo acceder a los valores de un objeto
+A diferencia de los arrays, únicamente es necesario saber la propiedad del objeto para acceder a su valor.
+
+Existen tres formas para acceder al valor de un objeto:
+
+Mediante la notación de corchetes
+Mediante la notación de punto
+Qué es la notación de corchetes
+La notación de corchetes ya ese familiar para ti, similar a los arrays, indicamos entre corchetes la propiedad del objeto entre comillas.
+
+objeto["propiedad"]
+
+Por ejemplo, accedamos a las propiedades del objeto miAuto creado anteriormente.
+
+<img src='https://imgur.com/kTjjLop.png' alt='code'>
+
+Observa que cuando accedes a un método, únicamente muestra la función, esto sucede porque la propiedad guarda dicha función que aún no es ejecutada. Para ejecutarla hay que utilizar los paréntesis.
+
+<img src='https://imgur.com/RQHoI57.png' alt='code'>
+
+Finalmente, ten cuidado con las comillas, si nos las usas, estás haciendo referencia a una variable. En este caso existirán tres posibilidades:
+
+Si existe la variable y su valor coincide con una propiedad del objeto, entonces mostrará su respectivo valor.
+Si existe la variable, pero su valor no coincide con una propiedad del objeto, entonces mostrará undefined.
+Si no existe la variable, entonces mostrará un error de referencia.
+
+<img src='https://imgur.com/ScLMVZE.png' alt='code'>
+
+Qué es la notación de punto
+La notación de punto indicamos con un punto la propiedad del objeto. Si existen espacios, la única forma de acceder a esa propiedad es mediante la notación de corchetes.
+
+objeto.propiedad
+
+Por ejemplo, accedamos a las propiedades del objeto miAuto creado anteriormente.
+
+
+<img src='https://imgur.com/uzqohXb.png' alt='code'>
+
+Igualmente, para ejecutar el método hay que utilizar los paréntesis.
+
+<img src='https://imgur.com/R0vAaeu.png' alt='code'>
+
+Los arrays también son objetos
+La notación punto te debe de parecer familiar, ya que así usábamos los diferentes atributos y métodos de los arrays, como length o map.
+
+Esto es debido a que los arrays también son objetos en JavaScript. Por esta razón, también podemos utilizar la notación de corchetes, pero no es recomendable.
+
+<img src='https://imgur.com/9SCmwPT.png' alt='code'>
+
+Cómo añadir propiedades de un objeto
+Para añadir propiedades de un objeto, utilizamos la notación de corchetes o de punto con la nueva propiedad, asignándole su respectivo valor.
+
+Por ejemplo, añadamos la propiedad color del objeto miAuto.
+
+<img src='https://imgur.com/dP9c2Mg.png' alt='code'>
+
+Cómo modificar propiedades de un objeto
+Para modificar propiedades de un objeto, utilizamos la notación de corchetes o de punto con la propiedad específica, asignándole su nuevo valor.
+
+Por ejemplo, modifiquemos la propiedad marca, de "Toyota" a "Ford", del objeto miAuto.
+
+<img src='https://imgur.com/0lv4p2S.png' alt='code'>
+
+Cómo eliminar propiedades de un objeto
+Para eliminar propiedades de un objeto, utilizamos la palabra reservada delete seguido de la propiedad del objeto.
+
+Por ejemplo, eliminemos la propiedad marca del objeto miAuto.
+
+<img src='https://imgur.com/B6ImnK5.png' alt='code'>
+
+El objeto contexto this
+En JavaScript, el objeto contexto this hace referencia a diferentes valores según su contexto de ejecución. Como es un tema complejo de programación orientada a objetos, no profundizaré.
+
+En objetos, el contexto this hace referencia al propio objeto. Esto sirve para acceder a los atributos y métodos propios del objeto.
+
+Por ejemplo, cambiemos la función detalle del objeto miAuto para mostrar un mensaje personalizado.
+
+<img src='https://imgur.com/fZv4Qzd.png' alt='code'>
+
+Si ejecutamos la función miAuto.detalle() mostrará un error de referencia, que modelo no está definido.
+
+Hagamos un pequeño cambio, utilicemos la notación de punto para acceder a los valores de la propiedad.
+
+<img src='https://imgur.com/KHqUXu7.png' alt='code'> 
+
+¡Funcionó! Sin embargo, necesito crear otro objeto con el mismo código.
+
+<img src='https://imgur.com/gRtENpm.png' alt='code'>
+
+Ahora muestra nuevamente un error de referencia del objeto miAuto. ¿Pero cambio miAuto por otroAuto y problema resuelto? Sí, pero como programador no debemos cambiar manualmente el código que puede ser reutilizado.
+
+Realicemos otro cambio, utilicemos el objeto contexto this para hacer referencia a nuestro objeto.
+
+<img src='https://imgur.com/sp9PGYd.png' alt='code'>
+
+¡Funcionó! Ahora creemos otro objeto.
+
+<img src='https://imgur.com/dFRu8Oi.png' alt='code'>
+
+¡Volvió a funcionar! Ahora podremos crear varios objetos sin cambiar una y otra vez la referencia al objeto this. En el objeto miAuto, this es igual a miAuto; mientras que en el objeto otroAuto, this es igual a otroAuto. Por eso podemos acceder a los atributos y métodos, independientemente del objeto creado.
+
+Crear varios objetos a partir de un código base se denomina crear una instancia.
+
+----------------------------------------------------------------------------------------------
+
+<h1>Objetos: funcion constructora</h1>
+
+Existe un problema al momento de construir varios objetos a partir de un código base, los atributos deben cambiar con respecto a la nueva información. Para esto se utiliza una función constructora.
+
+Una función constructora sirve para crear varios objetos a partir de nueva información, esto es recibido argumentos.
+
+Cómo generar varios objetos a partir de una función constructora
+Para crear una función constructora, debemos definir los parámetros correspondientes, que serán los atributos del objeto, que cambiarán con la nueva información mediante argumentos. Estos argumentos deben hacer referencia a cada uno del nuevo objeto, esto mediante el objeto contexto this.
+
+Ten en cuenta que los parámetros de la función son diferentes a los atributos del objeto 😄.
+
+
+<img src='https://imgur.com/aXIg1TD.png' code='alt'>
+
+Si ejecutamos la función Auto mostrará un error, necesitamos especificar que vamos a construir una instancia mediante la palabra reservada new.
+
+<img src='https://imgur.com/xdPRyCn.png' alt='code'> 
+
+De esta manera, puedes crear varios objetos a partir de una función constructora que permita especificar atributos y métodos personalizados.
+
+<img src='https://imgur.com/znzVEno.png' alt='code'>
+
+Puede que observes la propiedad __proto__, no te preocupes, ya lo aprenderás.
+
+----------------------------------------------------------------------------------------------
+
+<h1>Metodos de recorridos de Arrays</h1>
+
+Existen métodos de arrays para recorrerlos, y devolver un valor o un array con nuevos resultados. Entre estos están dos muy importantes: map y filter.
+
+Utilizaremos el siguiente array de objetos para los ejemplos de los métodos:
+
+<img src='https://imgur.com/mjnVzau.png' alt='code'> 
+
+Cómo utilizar el método filter
+El método filter consiste en crear un nuevo array a partir de los elementos originales filtrados mediante una función (callback) que indica la condición a cumplir y es inmutable. Si la condición se cumple, retorna el elemento completo.
+
+El método filter recibe dos argumentos:
+
+La función que itera y evalúa si cada elemento del array si cumple con la condición especificada (obligatorio).
+Un objeto al que puede hacer referencia el contexto this en la función. Si se lo omite, será undefined. Recuerde que this es diferente según el lugar donde sea invocado.
+
+<img src='https://imgur.com/qNYdwBF.png' alt='code'>
+
+La función, que recibe como argumento el método filter, utiliza tres parámetros:
+
+El valor actual del elemento iterado. Es decir, si es la primera iteración, será el primer elemento, y así sucesivamente.
+El índice del elemento iterado. Es decir, si es la primera iteración, será el índice 0, y así sucesivamente.
+El array que está iterando.
+
+
+<img src='https://imgur.com/9EPIv6e.png' alt='code'>
+
+Practiquemos el uso del método filter
+Utilicemos el array articulos que definimos para filtrar en un nuevo array los artículos cuyo costo sea menor o igual que 500.
+
+Entonces utilizamos el método filter que retorne la condición que necesitamos. Recuerda que el primer parámetro de la función callback es cada uno de los elementos del array.
+
+<img src='https://imgur.com/Z79KTE2.png' alt='code'>
+
+Cómo utilizar el método map
+El método map es inmutable y consiste en crear un nuevo array a partir de los elementos originales transformados mediante una función (callback).
+
+El método map recibe dos argumentos:
+
+La función que itera y transforma cada elemento del array (obligatorio).
+Un objeto al que puede hacer referencia el contexto this en la función. Si se lo omite, será undefined. Recuerde que this es diferente según el lugar donde sea invocado.
+
+<img src='https://imgur.com/3fRAOh8.png' alt='code'>
+
+La función, que recibe como argumento el método map, utiliza tres parámetros opcionales:
+
+El valor actual del elemento iterado. Es decir, si es la primera iteración, será el primer elemento, y así sucesivamente.
+El índice del elemento iterado. Es decir, si es la primera iteración, será el índice 0, y así sucesivamente.
+El array que está iterando.
+
+<img src='https://imgur.com/rTLUXyK.png' alt='code'>
+
+Practiquemos el uso del método map
+Utilicemos el array articulos que definimos para crear un nuevo array con el nombre de cada uno de los artículos.
+
+Entonces utilizamos el método map que retorne el nombre de cada artículo. Recuerda que el primer parámetro de la función callback es cada uno de los elementos del array.
+
+<img src='https://imgur.com/9GV4WO2.png' alt='code'>
+
+----------------------------------------------------------------------------------------------
+
+<h1>Recorriendo Arrays con .find(), .foreach() y .some()</h1>
+
+Para continuar con otros métodos para recorrer arrays, aprenderás find, forEach y some.Utilizaremos el siguiente array de objetos para los ejemplos de los métodos:
+----------------------------------------------------------------------------------------------
+var articulos = [
+  { nombre: "Bici", costo: 3000 },
+  { nombre: "TV", costo: 2500 },
+  { nombre: "Libro", costo: 320 },
+  { nombre: "Celular", costo: 10000 },
+  { nombre: "Laptop", costo: 20000 },
+  { nombre: "Teclado", costo: 500 },
+  { nombre: "Audifonos", costo: 1700 },
+]
+----------------------------------------------------------------------------------------------
+Cómo utilizar el método find
+El método find consiste en encontrar el primer elemento de un array que cumpla con la condición especificada en la función (callback). Si ningún elemento cumpla con la condición, retornará undefined.
+
+El método find recibe dos argumentos:
+
+La función que itera y evalúa cada elemento del array hasta encuentre uno que cumpla con la condición especificada (obligatorio).
+Un objeto al que puede hacer referencia el contexto this en la función. Si se lo omite, será undefined.
+----------------------------------------------------------------------------------------------
+array.find(function(), thisArg)
+----------------------------------------------------------------------------------------------
+La función, que recibe como argumento, utiliza tres parámetros opcionales:
+
+El valor actual del elemento iterado. Es decir, si es la primera iteración, será el primer elemento, y así sucesivamente.
+El índice del elemento iterado. Es decir, si es la primera iteración, será el índice 0, y así sucesivamente.
+El array que está iterando.
+----------------------------------------------------------------------------------------------
+array.find(function(element, index, array))
+----------------------------------------------------------------------------------------------
+
+Practiquemos el uso del método find
+Utilicemos el array articulos que definimos para encontrar algún artículo que su nombre sea Laptop.
+
+Entonces utilizamos el método find que retorne la condición que necesitamos. Recuerda que el primer parámetro de la función callback es cada uno de los elementos del array.
+----------------------------------------------------------------------------------------------
+var algunArticulo = articulos.find(function (articulo) {
+  return (articulo.nombre = "Laptop")
+})
+console.log(algunArticulo)
+/* 
+{ nombre: 'Laptop', costo: 3000 }
+*/
+----------------------------------------------------------------------------------------------
+
+Cómo utilizar el método forEach
+El método forEach de los arrays consiste en ejecutar una función (callback) para cada uno de los elementos iterados. Iterar significa repetir una acción varias veces. Este método no retorna ningún valor.
+
+Este método recibe dos argumentos:
+
+La función que itera cada elemento del array (obligatorio).
+Un objeto al que puede hacer referencia el contexto this en la función. Si se lo omite, será undefined.
+----------------------------------------------------------------------------------------------
+array.forEach(function(), thisArg)
+----------------------------------------------------------------------------------------------
+La función, que recibe como argumento el método forEach, utiliza tres parámetros opcionales:
+
+El valor actual del elemento iterado. Es decir, si es la primera iteración, será el primer elemento, y así sucesivamente.
+El índice del elemento iterado. Es decir, si es la primera iteración, será el índice 0, y así sucesivamente.
+El array que está iterando.
+---------------------------------------------------------------------------------------------
+array.forEach(function(element, index, array))
+---------------------------------------------------------------------------------------------
+Practiquemos el uso del método forEach
+Utilicemos el array articulos que definimos para mostrar todos los artículos.
+
+Entonces utilizamos el método forEach y que ejecute la función console.log para cada uno de los elementos. Recuerda que el primer parámetro de la función callback es cada uno de los elementos del array.
+---------------------------------------------------------------------------------------------
+articulos.forEach(function (articulo) {
+  console.log(articulo)
+})
+/* 
+{ nombre: 'Bici', costo: 3000 }
+{ nombre: 'TV', costo: 2500 }
+...
+{ nombre: 'Audifonos', costo: 1700 }
+*/
+---------------------------------------------------------------------------------------------
+Cómo utilizar el método some
+El método somees inmutable y consiste retornar un valor lógico verdadero si existe al menos un elemento que cumpla la condición establecida en la función (callback).
+
+El método some recibe dos argumentos:
+
+La función que itera y evalúa cada elemento del array hasta que al menos uno cumpla con la condición especificada (obligatorio).
+Un objeto al que puede hacer referencia el contexto this en la función. Si se lo omite, será undefined.
+---------------------------------------------------------------------------------------------
+array.some(function(), thisArg)
+---------------------------------------------------------------------------------------------
+La función, que recibe como argumento el método some, utiliza tres parámetros:
+
+El valor actual del elemento iterado. Es decir, si es la primera iteración, será el primer elemento, y así sucesivamente.
+El índice del elemento iterado. Es decir, si es la primera iteración, será el índice 0, y así sucesivamente.
+El array que está iterando.
+---------------------------------------------------------------------------------------------
+array.some(function(element, index, array))
+---------------------------------------------------------------------------------------------
+Practiquemos el uso del método some
+Utilicemos el array articulos que definimos para saber si existe al menos un artículo con el costo menor o igual que 700.
+
+Entonces utilizamos el método some que retorne la condición que necesitamos. Recuerda que el primer parámetro de la función callback es cada uno de los elementos del array.
+---------------------------------------------------------------------------------------------
+var existeArticulo = articulos.some(function (articulo) {
+  return articulo.costo <= 700
+})
+console.log(existeArticulo) // true
+---------------------------------------------------------------------------------------------
+
+
+
+LordSith.
+
+
+
 
 
 
